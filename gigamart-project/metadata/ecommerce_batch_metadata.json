@@ -1,0 +1,27 @@
+{
+  "name": "Gigamart E-commerce Batch",
+  "description": "Batch ingestion of e-commerce orders from GCS to BigQuery raw layer (giga_raw.raw_ecom_orders).",
+  "parameters": [
+    {
+      "name": "input_pattern",
+      "label": "Input GCS pattern",
+      "helpText": "GCS file pattern for e-commerce orders (e.g. gs://<bucket>/ecom/*.json)",
+      "paramType": "TEXT",
+      "isOptional": true
+    },
+    {
+      "name": "output_table",
+      "label": "Output table",
+      "helpText": "BigQuery table for raw e-commerce orders (e.g. <project>:giga_raw.raw_ecom_orders)",
+      "paramType": "TEXT",
+      "isOptional": true
+    },
+    {
+      "name": "dead_letter_table",
+      "label": "Dead-letter table",
+      "helpText": "Optional BigQuery table for failed e-commerce records (e.g. <project>:giga_raw.raw_ecom_orders_dlq). If not set, errors are only logged.",
+      "paramType": "TEXT",
+      "isOptional": true
+    }
+  ]
+}

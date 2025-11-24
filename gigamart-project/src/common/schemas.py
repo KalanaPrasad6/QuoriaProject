@@ -1,0 +1,60 @@
+RAW_POS_SCHEMA = {"fields": [
+    {"name": "transaction_id", "type": "STRING", "mode": "REQUIRED"},
+    {"name": "store_id", "type": "STRING", "mode": "NULLABLE"},
+    {"name": "customer_id", "type": "STRING", "mode": "NULLABLE"},
+    {"name": "amount", "type": "FLOAT", "mode": "NULLABLE"},
+    {"name": "currency", "type": "STRING", "mode": "NULLABLE"},
+    {"name": "event_ts", "type": "TIMESTAMP", "mode": "NULLABLE"},
+    {"name": "event_date", "type": "DATE", "mode": "NULLABLE"},
+    {"name": "ingestion_ts", "type": "TIMESTAMP", "mode": "REQUIRED"},
+    {"name": "source_file", "type": "STRING", "mode": "NULLABLE"},
+    {"name": "raw_payload", "type": "STRING", "mode": "NULLABLE"},
+    {"name": "dq_status", "type": "STRING", "mode": "NULLABLE"},
+    {"name": "dq_errors", "type": "STRING", "mode": "NULLABLE"},
+]}
+
+RAW_ECOM_SCHEMA = {"fields": [
+    {"name": "order_id", "type": "STRING", "mode": "REQUIRED"},
+    {"name": "customer_id", "type": "STRING", "mode": "NULLABLE"},
+    {"name": "store_id", "type": "STRING", "mode": "NULLABLE"},
+    {"name": "total_amount", "type": "FLOAT", "mode": "NULLABLE"},
+    {"name": "payment_type", "type": "STRING", "mode": "NULLABLE"},
+    {"name": "order_ts", "type": "TIMESTAMP", "mode": "NULLABLE"},
+    {"name": "order_date", "type": "DATE", "mode": "NULLABLE"},
+    {"name": "ingestion_ts", "type": "TIMESTAMP", "mode": "REQUIRED"},
+    {"name": "source_file", "type": "STRING", "mode": "NULLABLE"},
+    {"name": "raw_payload", "type": "STRING", "mode": "NULLABLE"},
+    {"name": "dq_status", "type": "STRING", "mode": "NULLABLE"},
+    {"name": "dq_errors", "type": "STRING", "mode": "NULLABLE"},
+]}
+
+RAW_CRM_SCHEMA = {"fields": [
+    {"name": "customer_id", "type": "STRING", "mode": "REQUIRED"},
+    {"name": "first_name", "type": "STRING", "mode": "NULLABLE"},
+    {"name": "last_name", "type": "STRING", "mode": "NULLABLE"},
+    {"name": "email", "type": "STRING", "mode": "NULLABLE"},
+    {"name": "loyalty_status", "type": "STRING", "mode": "NULLABLE"},
+    {"name": "city", "type": "STRING", "mode": "NULLABLE"},
+    {"name": "country", "type": "STRING", "mode": "NULLABLE"},
+    {"name": "updated_at", "type": "TIMESTAMP", "mode": "NULLABLE"},
+    {"name": "ingestion_ts", "type": "TIMESTAMP", "mode": "REQUIRED"},
+    {"name": "source_file", "type": "STRING", "mode": "NULLABLE"},
+    {"name": "raw_payload", "type": "STRING", "mode": "NULLABLE"},
+    {"name": "raw_extra_attributes", "type": "STRING", "mode": "NULLABLE"},
+    {"name": "dq_status", "type": "STRING", "mode": "NULLABLE"},
+    {"name": "dq_errors", "type": "STRING", "mode": "NULLABLE"},
+]}
+
+RAW_INVENTORY_SCHEMA = {"fields": [
+    {"name": "product_id", "type": "STRING", "mode": "REQUIRED"},
+    {"name": "store_id", "type": "STRING", "mode": "REQUIRED"},
+    {"name": "product_name", "type": "STRING", "mode": "NULLABLE"},
+    {"name": "quantity", "type": "INT64", "mode": "NULLABLE"},
+    {"name": "price", "type": "FLOAT", "mode": "NULLABLE"},
+    {"name": "last_updated", "type": "TIMESTAMP", "mode": "NULLABLE"},
+    {"name": "ingestion_ts", "type": "TIMESTAMP", "mode": "REQUIRED"},
+    {"name": "source_file", "type": "STRING", "mode": "NULLABLE"},
+    {"name": "raw_payload", "type": "STRING", "mode": "NULLABLE"},
+    {"name": "dq_status", "type": "STRING", "mode": "NULLABLE"},
+    {"name": "dq_errors", "type": "STRING", "mode": "NULLABLE"},
+]}

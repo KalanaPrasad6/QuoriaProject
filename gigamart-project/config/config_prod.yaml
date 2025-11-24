@@ -1,0 +1,16 @@
+project_id: "quoriagigamartproject-prod"
+region: "asia-south1"
+
+bq:
+  raw_dataset: "giga_raw"
+  curated_dataset: "giga_curated"
+  mart_dataset: "giga_mart"
+
+gcs:
+  raw_bucket: "giga-raw-quoriagigamartproject-prod"
+  staging_bucket: "giga-dataflow-staging-quoriagigamartproject-prod"
+  temp_bucket: "giga-dataflow-temp-quoriagigamartproject-prod"
+  pos_prefix: "pos/"
+  ecommerce_prefix: "ecom-orders/"
+  crm_prefix: "crm-profiles/"
+  inventory_prefix: "inventory/"

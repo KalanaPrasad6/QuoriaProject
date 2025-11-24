@@ -1,0 +1,34 @@
+{
+  "name": "Gigamart POS Streaming",
+  "description": "Real-time streaming ingestion of POS transactions from Pub/Sub to BigQuery",
+  "parameters": [
+    {
+      "name": "input_subscription",
+      "label": "Pub/Sub Subscription",
+      "helpText": "Pub/Sub subscription for POS transactions (e.g. projects/<project>/subscriptions/pos-transactions-sub)",
+      "paramType": "TEXT",
+      "isOptional": false
+    },
+    {
+      "name": "output_table",
+      "label": "Output table",
+      "helpText": "BigQuery table for raw POS transactions (e.g. <project>:giga_raw.raw_pos_transactions). If not set, defaults are taken from config.",
+      "paramType": "TEXT",
+      "isOptional": true
+    },
+    {
+      "name": "window_size",
+      "label": "Window Size (seconds)",
+      "helpText": "Fixed window size in seconds for processing (default in code: 60).",
+      "paramType": "TEXT",
+      "isOptional": true
+    },
+    {
+      "name": "allowed_lateness",
+      "label": "Allowed Lateness (seconds)",
+      "helpText": "Allowed lateness for late arriving data in seconds (default in code: 3600).",
+      "paramType": "TEXT",
+      "isOptional": true
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "name": "Gigamart POS Batch",
+  "description": "Batch ingestion of POS transactions from GCS to BigQuery raw layer (giga_raw.raw_pos_transactions).",
+  "parameters": [
+    {
+      "name": "input_pattern",
+      "label": "Input GCS pattern",
+      "helpText": "GCS file pattern for POS transactions (e.g. gs://<bucket>/pos/*.json)",
+      "paramType": "TEXT",
+      "isOptional": true
+    },
+    {
+      "name": "output_table",
+      "label": "Output table",
+      "helpText": "BigQuery table for raw POS transactions (e.g. <project>:giga_raw.raw_pos_transactions)",
+      "paramType": "TEXT",
+      "isOptional": true
+    },
+    {
+      "name": "dead_letter_table",
+      "label": "Dead-letter table",
+      "helpText": "Optional BigQuery table for failed POS records (e.g. <project>:giga_raw.raw_pos_transactions_dlq). If not set, errors are only logged.",
+      "paramType": "TEXT",
+      "isOptional": true
+    }
+  ]
+}

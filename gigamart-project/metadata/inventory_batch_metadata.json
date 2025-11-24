@@ -1,0 +1,27 @@
+{
+  "name": "Gigamart Inventory Batch",
+  "description": "Batch ingestion of inventory CSV snapshots from GCS to BigQuery raw layer (giga_raw.raw_inventory_snapshots).",
+  "parameters": [
+    {
+      "name": "input_pattern",
+      "label": "Input GCS pattern",
+      "helpText": "GCS file pattern for inventory snapshots (e.g. gs://<bucket>/inventory/*.csv)",
+      "paramType": "TEXT",
+      "isOptional": true
+    },
+    {
+      "name": "output_table",
+      "label": "Output table",
+      "helpText": "BigQuery table for raw inventory snapshots (e.g. <project>:giga_raw.raw_inventory_snapshots)",
+      "paramType": "TEXT",
+      "isOptional": true
+    },
+    {
+      "name": "dead_letter_table",
+      "label": "Dead-letter table",
+      "helpText": "Optional BigQuery table for failed inventory records (e.g. <project>:giga_raw.raw_inventory_snapshots_dlq). If not set, errors are only logged.",
+      "paramType": "TEXT",
+      "isOptional": true
+    }
+  ]
+}

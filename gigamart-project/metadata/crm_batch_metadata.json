@@ -1,0 +1,27 @@
+{
+  "name": "Gigamart CRM Batch",
+  "description": "Batch ingestion of CRM CSV exports from GCS to BigQuery raw layer (giga_raw.raw_crm_customers).",
+  "parameters": [
+    {
+      "name": "input_pattern",
+      "label": "Input GCS pattern",
+      "helpText": "GCS file pattern for CRM exports (e.g. gs://<bucket>/crm/*.csv)",
+      "paramType": "TEXT",
+      "isOptional": true
+    },
+    {
+      "name": "output_table",
+      "label": "Output table",
+      "helpText": "BigQuery table for raw CRM customers (e.g. <project>:giga_raw.raw_crm_customers)",
+      "paramType": "TEXT",
+      "isOptional": true
+    },
+    {
+      "name": "dead_letter_table",
+      "label": "Dead-letter table",
+      "helpText": "Optional BigQuery table for failed CRM records (e.g. <project>:giga_raw.raw_crm_customers_dlq). If not set, errors are only logged.",
+      "paramType": "TEXT",
+      "isOptional": true
+    }
+  ]
+}
